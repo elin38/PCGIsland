@@ -3,6 +3,52 @@ class ArrayMap extends Phaser.Scene {
         super("arrayMapScene");
         this.layer = null; 
         this.waterLayer = null;
+        this.villageNames = [
+            "Willowdale",
+            "Oakwood",
+            "Stonehaven",
+            "Briarwood",
+            "Maple Grove",
+            "Thistledown",
+            "Ashford",
+            "Fernridge",
+            "Hollowbrook",
+            "Redstone",
+            "Silverpine",
+            "Nightshade Hollow",
+            "Frostvale",
+            "Misty Hollow",
+            "Emberwood",
+            "Duskwood",
+            "Thornefield",
+            "Sunhaven",
+            "Crestwood",
+            "Meadowlark"
+        ];
+        this.oceanNames = [
+            "Sapphire Sea",
+            "Azure Abyss",
+            "Whispering Waters",
+            "Stormy Deep",
+            "Celestial Cove",
+            "Tidal Vale",
+            "Midnight Bay",
+            "Coral Expanse",
+            "Crystal Ocean",
+            "Tempest Tide",
+            "Serpent's Sea",
+            "Echoing Waters",
+            "Sunlit Depths",
+            "Phantom Gulf",
+            "Silver Currents",
+            "Triton's Reach",
+            "Mermaid's Lagoon",
+            "Thalassic Abyss",
+            "Ocean's 11",
+            "Pearl Bay"
+        ];
+        this.maxNames = 8;
+        this.namesPlaced = 0; 
     }
 
     preload() {
@@ -16,6 +62,7 @@ class ArrayMap extends Phaser.Scene {
 
     create() {
         this.generateMap();
+        this.placeNames(); // Place names after generating the map
 
         this.regen = this.input.keyboard.addKey('R');
         this.shrinkWindow = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.COMMA);
@@ -64,7 +111,7 @@ class ArrayMap extends Phaser.Scene {
 
         const tilesheet = map.addTilesetImage("smb_tiles", null, 64, 64);
         
-        // Water layed written with the help of ChatGPT
+        // Ocean layer written with the help of ChatGPT
         const waterLevel = Array.from({ length: colSize }, () => Array(rowSize).fill(186));
         const waterMap = this.make.tilemap({
             data: waterLevel,
@@ -76,6 +123,35 @@ class ArrayMap extends Phaser.Scene {
 
         this.layer = map.createLayer(0, tilesheet, 0, 0);
         this.layer.setScale(0.5);
+    }
+
+    placeNames() {
+        const colSize = 20;
+        const rowSize = 20;
+
+        for (let y = 0; y < colSize; y++) {
+            for (let x = 0; x < rowSize; x++) {
+                if (this.namesPlaced < this.maxNames && Math.random() < 0.01) {
+                    const tileType = this.layer.getTileAt(x, y).index;
+                    let nameToPlace;
+    
+                    if (tileType === 23 && this.namesPlaced < this.maxNames) {
+                        nameToPlace = this.villageNames[this.namesPlaced % this.villageNames.length];
+                    } else if (tileType === 186 && this.namesPlaced < this.maxNames) {
+                        nameToPlace = this.oceanNames[this.namesPlaced % this.oceanNames.length];
+                    }
+    
+
+                    if (nameToPlace) {
+                        this.add.text(x * 64 * 0.5 + 32, y * 64 * 0.5 + 16, nameToPlace, {
+                            font: "8px Arial",
+                            fill: "#ffffff"
+                        }).setOrigin(0.5);
+                        this.namesPlaced++;
+                    }
+                }
+            }
+        }
     }
 
     gridCode(grid, y, x, targetTile) {
@@ -118,17 +194,23 @@ class ArrayMap extends Phaser.Scene {
             this.seed = Math.random();
             noise.seed(this.seed);
             this.generateMap();
+            this.namesPlaced = 0;
+            this.placeNames();
             document.getElementById('seed-value').innerHTML = `Seed: ${this.seed}`;
         }
 
         if (Phaser.Input.Keyboard.JustDown(this.shrinkWindow)) {
             this.sampleScale = Math.max(1, this.sampleScale - 1);
             this.generateMap();
+            this.namesPlaced = 0;
+            this.placeNames();
         }
 
         if (Phaser.Input.Keyboard.JustDown(this.growWindow)) {
             this.sampleScale += 1;
             this.generateMap();
+            this.namesPlaced = 0;
+            this.placeNames();
         }
     }
 }
