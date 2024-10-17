@@ -1,9 +1,7 @@
-// Nathan Altice
-// Created: 5/4/20
-// Updated: 1/13/24
-// Mappy
-// Tilemap examples
-// Some examples adapted from Michael Hadley's "Modular Game Worlds in Phaser 3" tutorial series
+// Made with the help of Nathan Altice's "Mappy"
+// Debugged with the help of ChatGPT
+// Ethan Lin 10/16/2024
+// Made to show off the capabilities of noise in terrain map/terrain generation
 
 // debug with extreme prejudice
 "use strict"
@@ -15,9 +13,8 @@ let config = {
     render: {
         pixelArt: true
     },
-    //pixelArt: true,
-    width: 320,
-    height: 320,
+    width: 640,
+    height: 640,
     zoom: 2,
     physics: {
         default: "arcade",
@@ -25,7 +22,7 @@ let config = {
             //debug: true,
         }
     },
-    scene: [ ArrayMap, RandomMap]
+    scene: [ ArrayMap ]
 }
 
 const game = new Phaser.Game(config)

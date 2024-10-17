@@ -1,0 +1,176 @@
+{
+    "activeFile": "Island Tiles.tsx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "Island Tiles.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "IslandTiles.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "IslandTileset.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "test.tmx": {
+            "scale": 0.348828125,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 319.64165733482645,
+                "y": 242.2396416573348
+            }
+        },
+        "tilemap01.json": {
+            "scale": 0.31006944444444445,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 359.5968645016797,
+                "y": 240.26875699888012
+            }
+        },
+        "tilemap01.json#kenney_colored_packed": {
+            "scaleInDock": 1
+        },
+        "tilemap01.tmx": {
+            "scale": 0.31006944444444445,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 359.5968645016797,
+                "y": 240.26875699888012
+            }
+        },
+        "tilemap01.tmx#kenney_colored_packed": {
+            "scaleInDock": 1
+        },
+        "tilemap02.tmx": {
+            "scale": 0.13953125,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 799.104143337066,
+                "y": 161.25419932810792
+            }
+        },
+        "tilemap02.tmx#colored_packed": {
+            "scaleInDock": 1
+        },
+        "tilemap03.tmx": {
+            "scale": 0.48910156250000003,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 160.49836275057902,
+                "y": 640.9711684370258
+            }
+        },
+        "tilemap03.tmx#colored_packed": {
+            "scaleInDock": 1
+        },
+        "tilemap04.tmx": {
+            "scale": 0.23255208333333333,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 479.46248600223964,
+                "y": 161.25419932810746
+            }
+        },
+        "tilemap04.tmx#colored_packed": {
+            "scaleInDock": 1
+        },
+        "tilemap05.tmx": {
+            "scale": 0.69765625,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 159.82082866741322,
+                "y": 320.35834266517355
+            }
+        },
+        "tilemap05.tmx#colored_packed": {
+            "scaleInDock": 1
+        },
+        "tilemap06.tmx": {
+            "scale": 0.348828125,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 319.64165733482645,
+                "y": 322.50839865621504
+            }
+        },
+        "tilemap06.tmx#colored_packed": {
+            "scaleInDock": 1
+        },
+        "tilemap07-anim.tmx": {
+            "scale": 0.69765625,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 159.82082866741322,
+                "y": 161.25419932810752
+            }
+        },
+        "tilemap07-anim.tmx#colored_packed": {
+            "scaleInDock": 1
+        },
+        "tilemap07.tmx": {
+            "scale": 0.69765625,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 159.82082866741322,
+                "y": 161.25419932810752
+            }
+        },
+        "tilemap07.tmx#colored_packed": {
+            "scaleInDock": 1
+        },
+        "tilemap08.json": {
+            "scale": 0.5589732142857142,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 160.11500678859517,
+                "y": 560.8497723823976
+            }
+        },
+        "tilemap08.json#colored_packed": {
+            "scaleInDock": 1
+        },
+        "tilemap08.tmx": {
+            "scale": 0.5589732142857142,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 160.11500678859517,
+                "y": 560.8497723823976
+            }
+        },
+        "tilemap08.tmx#colored_packed": {
+            "scaleInDock": 1
+        }
+    },
+    "last.imagePath": "C:/Users/Ethan/Downloads/kenney_map-pack/Tilesheet",
+    "openFiles": [
+        "Island Tiles.tsx"
+    ],
+    "project": "KennyIsland.tiled-project",
+    "recentFiles": [
+        "Island Tiles.tsx",
+        "tilemap05.tmx",
+        "tilemap06.tmx",
+        "tilemap07.tmx",
+        "tilemap07-anim.tmx",
+        "tilemap08.json",
+        "tilemap08.tmx",
+        "tilemap01.json",
+        "tilemap02.tmx",
+        "tilemap04.tmx",
+        "tilemap03.tmx",
+        "tilemap01.tmx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 64,
+        "width": 64
+    },
+    "tileset.transparentColor": "#000000",
+    "tileset.useTransparentColor": true
+}
